@@ -1,0 +1,55 @@
+:root {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: teal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  margin-bottom: 4rem;
+}
+
+nav {
+  padding: 1rem;
+  width: 100%;
+  height: 4rem;
+  border: 1px solid black;
+  display: flex;
+  position: fixed;
+  top: 0;
+  justify-content: space-around;
+  align-items: center;
+  background-color: teal;
+}
+
+main {
+  padding: 1rem;
+  color: white;
+  height: calc(100vh - 4rem);
+}
+
+h1 {
+  border-bottom: 4px solid white;
+  text-align: center;
+  margin: 1rem;
+}
+
+.characters-div {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  justify-content: center;
+}
+
+figure {
+  width: 20rem;
+}

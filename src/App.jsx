@@ -11,7 +11,7 @@ function App() {
         <Nav />
       </header>
       <main>
-        <Characters />
+        <Outlet />
       </main>
     </>
   );

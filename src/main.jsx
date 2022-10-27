@@ -15,6 +15,7 @@ import Gallery from "../pages/Gallery";
 import Photo from "../pages/Photo";
 import NotFound from "../pages/404";
 import Characters from "../pages/Characters";
+import Character from "../pages/Character";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -22,9 +23,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
-          <Route path="gallery" element={<Gallery />} />
-          <Route path="gallery/:id" element={<Photo />} />
           <Route path="characters" element={<Characters />} />
+          <Route path="characters/:id" element={<Character />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
