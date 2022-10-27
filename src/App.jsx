@@ -2,6 +2,7 @@ import { Outlet } from "react-router";
 import { Nav } from "../components/Nav";
 import React from "react";
 import "./App.css";
+import Characters from "../pages/Characters";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         <Nav />
       </header>
       <main>
-        <Outlet />
+        <Characters />
       </main>
     </>
   );
