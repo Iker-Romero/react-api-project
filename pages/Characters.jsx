@@ -13,7 +13,7 @@ const Characters = () => {
     };
 
     data();
-  });
+  }, []);
 
   return (
     <>
@@ -27,16 +27,15 @@ const Characters = () => {
             origin: { name: origin },
             image,
           } = character;
-          console.log(character);
 
           return (
             <figure key={id}>
-              <Link to={`characters/${id}`}>
-                <h2>{name}</h2>
+              <Link to={`/characters/${id}`}>
+                {/* <h2>{name}</h2> */}
                 <img src={image} alt={`${name} image`} />
-                <p>{id}</p>
+                {/* <p>#{id}</p>
                 <p>Species: {species}</p>
-                <p>Origin: {origin}</p>
+                <p>Origin: {origin}</p> */}
               </Link>
             </figure>
           );

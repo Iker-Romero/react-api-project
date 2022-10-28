@@ -1,12 +1,19 @@
+export const getCharacterByID = async (id) => {
+  const rawData = await fetch(
+    `https://rickandmortyapi.com/api/character/${id}`
+  );
+  
+  const jsonData = await rawData.json();
+
+  return jsonData;
+}
+
 export const getCharacters = async () => {
   const characters = [];
 
   for (let i = 1; i <= 20; i++) {
-    const rawData = await fetch(
-      `https://rickandmortyapi.com/api/character/${i}`
-    );
-    const jsonData = await rawData.json();
-    characters.push(jsonData);
+    const character = await getCharacterByID(i);
+    characters.push(character);
   }
 
   return characters;
